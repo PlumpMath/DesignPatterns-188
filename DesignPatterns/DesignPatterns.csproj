@@ -40,7 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SingleTon.cs" />
+    <Compile Include="CreationalPatterns\AstonMartin.cs" />
+    <Compile Include="CreationalPatterns\AstonMartinFactory.cs" />
+    <Compile Include="CreationalPatterns\Bentley.cs" />
+    <Compile Include="CreationalPatterns\BentleyFactory.cs" />
+    <Compile Include="CreationalPatterns\ICar.cs" />
+    <Compile Include="CreationalPatterns\ICarFactory.cs" />
+    <Compile Include="CreationalPatterns\SingleTon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

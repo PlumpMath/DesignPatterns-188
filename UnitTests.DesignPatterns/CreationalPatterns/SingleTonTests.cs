@@ -1,4 +1,4 @@
-﻿using DesignPatterns;
+﻿using DesignPatterns.CreationalPatterns;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,15 +6,15 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace UnitTests.DesignPatterns
-{   
+namespace UnitTests.DesignPatterns.CreationalPatterns
+{
     public class SingleTonTests
     {
         [Fact]
         public void WhenGetInstance_ShouldReturnNotNullInstance()
         {
             //act
-            SingleTon sut = SingleTon.Instance;            
+            SingleTon sut = SingleTon.Instance;
             //assert
             Assert.NotNull(sut);
         }
@@ -37,7 +37,7 @@ namespace UnitTests.DesignPatterns
             //act
             var constractors = singleTonType.GetConstructors();
             //assert
-            Assert.False(constractors.Any(x => x.IsPublic));            
+            Assert.False(constractors.Any(x => x.IsPublic));
         }
     }
 }
