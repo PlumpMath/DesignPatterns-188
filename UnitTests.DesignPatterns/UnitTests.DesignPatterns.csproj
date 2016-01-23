@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CreationalPatterns\AbstractFactoryTests.cs" />
+    <Compile Include="CreationalPatterns\BuilderTests.cs" />
     <Compile Include="CreationalPatterns\SingleTonTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
