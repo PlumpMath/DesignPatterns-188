@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace DesignPatterns.CreationalPatterns.Entities
 {
@@ -7,6 +8,9 @@ namespace DesignPatterns.CreationalPatterns.Entities
         string Color { get; set; }
         int Wheel { get; set; }
 
+        bool IsDriving { get; }
+
         void Drive();
-    }
+        void StopDrive();
+    }   
 }
