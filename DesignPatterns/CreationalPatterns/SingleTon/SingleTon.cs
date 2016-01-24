@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPatterns.CreationalPatterns
+namespace DesignPatterns.CreationalPatterns.SingleTon
 {
     public class SingleTon
     {

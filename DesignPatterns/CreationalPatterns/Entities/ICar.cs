@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DesignPatterns.CreationalPatterns
+namespace DesignPatterns.CreationalPatterns.Entities
 {
     public interface ICar
     {

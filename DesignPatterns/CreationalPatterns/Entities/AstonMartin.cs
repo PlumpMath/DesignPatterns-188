@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace DesignPatterns.CreationalPatterns
+namespace DesignPatterns.CreationalPatterns.Entities
 {
-    public class Bentley : ICar
+    public class AstonMartin : ICar
     {
         public string Color
         {
@@ -20,7 +20,7 @@ namespace DesignPatterns.CreationalPatterns
 
         public void Drive()
         {
-            Console.WriteLine("Bentley Drive");
+            Console.WriteLine("Aston martin drive");
         }
     }
 }

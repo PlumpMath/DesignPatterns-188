@@ -40,16 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreationalPatterns\AstonMartin.cs" />
-    <Compile Include="CreationalPatterns\AstonMartinFactory.cs" />
-    <Compile Include="CreationalPatterns\Bentley.cs" />
-    <Compile Include="CreationalPatterns\BentleyFactory.cs" />
-    <Compile Include="CreationalPatterns\CarBuilder.cs" />
-    <Compile Include="CreationalPatterns\ICar.cs" />
-    <Compile Include="CreationalPatterns\ICarFactory.cs" />
-    <Compile Include="CreationalPatterns\SingleTon.cs" />
+    <Compile Include="CreationalPatterns\Entities\AstonMartin.cs" />
+    <Compile Include="CreationalPatterns\AbstractFactory\AstonMartinFactory.cs" />
+    <Compile Include="CreationalPatterns\Entities\Bentley.cs" />
+    <Compile Include="CreationalPatterns\AbstractFactory\BentleyFactory.cs" />
+    <Compile Include="CreationalPatterns\Builder\CarBuilder.cs" />
+    <Compile Include="CreationalPatterns\Entities\ICar.cs" />
+    <Compile Include="CreationalPatterns\AbstractFactory\ICarFactory.cs" />
+    <Compile Include="CreationalPatterns\SingleTon\SingleTon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

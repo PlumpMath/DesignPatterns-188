@@ -1,6 +1,7 @@
-﻿using System;
+﻿using DesignPatterns.CreationalPatterns.Entities;
+using System;
 
-namespace DesignPatterns.CreationalPatterns
+namespace DesignPatterns.CreationalPatterns.AbstractFactory
 {
     public class BentleyFactory : ICarFactory
     {
