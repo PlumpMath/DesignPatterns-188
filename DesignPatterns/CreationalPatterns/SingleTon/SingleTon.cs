@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.CreationalPatterns.SingleTon
 {
-    public class SingleTon
+    public sealed class SingleTon
     {
         public static SingleTon Instance { get; private set; }
         static SingleTon()

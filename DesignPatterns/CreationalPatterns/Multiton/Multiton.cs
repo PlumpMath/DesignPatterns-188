@@ -19,20 +19,25 @@ namespace DesignPatterns.CreationalPatterns.Multiton
             Key = key;
         }
 
-        private static Dictionary<string, Multiton> _instances;
-
-        public static Multiton GetInstance(string key)
-        {
-            if (!_instances.ContainsKey(key))
-            {
-                _instances[key] = new Multiton(key);
-            }
-            return _instances[key];
-        }
+        private static readonly Dictionary<string, Multiton> _instances;
+        private static readonly object _lock;
 
         static Multiton()
         {
+            _lock = new object();
             _instances = new Dictionary<string, Multiton>();
         }
+
+        public static Multiton GetInstance(string key)
+        {
+            lock (_lock)
+            {
+                if (!_instances.ContainsKey(key))
+                {
+                    _instances[key] = new Multiton(key);
+                }
+                return _instances[key];
+            }            
+        }        
     }
 }

@@ -64,6 +64,7 @@
     <Compile Include="CreationalPatterns\BuilderTests.cs" />
     <Compile Include="CreationalPatterns\FactoryMethodTests.cs" />
     <Compile Include="CreationalPatterns\MultiTonTests.cs" />
+    <Compile Include="CreationalPatterns\PoolTests.cs" />
     <Compile Include="CreationalPatterns\SingleTonTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -51,6 +51,8 @@
     <Compile Include="CreationalPatterns\FactoryMethod\BentelyDriver.cs" />
     <Compile Include="CreationalPatterns\FactoryMethod\DriverBase.cs" />
     <Compile Include="CreationalPatterns\Multiton\Multiton.cs" />
+    <Compile Include="CreationalPatterns\ObjectPool\Pool.cs" />
+    <Compile Include="CreationalPatterns\ObjectPool\PoolObject.cs" />
     <Compile Include="CreationalPatterns\SingleTon\SingleTon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
