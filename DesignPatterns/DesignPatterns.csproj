@@ -50,6 +50,7 @@
     <Compile Include="CreationalPatterns\FactoryMethod\AstonMartinDriver.cs" />
     <Compile Include="CreationalPatterns\FactoryMethod\BentelyDriver.cs" />
     <Compile Include="CreationalPatterns\FactoryMethod\DriverBase.cs" />
+    <Compile Include="CreationalPatterns\Multiton\Multiton.cs" />
     <Compile Include="CreationalPatterns\SingleTon\SingleTon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

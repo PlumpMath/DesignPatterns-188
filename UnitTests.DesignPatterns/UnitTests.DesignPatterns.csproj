@@ -63,6 +63,7 @@
     <Compile Include="CreationalPatterns\Bentely.cs" />
     <Compile Include="CreationalPatterns\BuilderTests.cs" />
     <Compile Include="CreationalPatterns\FactoryMethodTests.cs" />
+    <Compile Include="CreationalPatterns\MultiTonTests.cs" />
     <Compile Include="CreationalPatterns\SingleTonTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
