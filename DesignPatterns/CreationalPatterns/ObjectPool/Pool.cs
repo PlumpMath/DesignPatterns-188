@@ -6,38 +6,39 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.CreationalPatterns.ObjectPool
 {
-    public sealed class Pool
+    public sealed class Pool<T> where T :class,IPoolObject,new()
     {
-        public static Pool Instance { get; private set; }
+        public static Pool<T> Instance { get; private set; }
         static Pool()
         {
-            Instance = new Pool();
+            Instance = new Pool<T>();
         }
 
-        private readonly List<PoolObject> _inUseObjects;
-        private readonly List<PoolObject> _availableObjects;
+        private readonly List<T> _inUseObjects;
+        private readonly List<T> _availableObjects;
         private readonly object _lock;
 
         private int _counter;
 
         private Pool()
         {
-            _inUseObjects = new List<PoolObject>();
-            _availableObjects = new List<PoolObject>();
+            _inUseObjects = new List<T>();
+            _availableObjects = new List<T>();
             _counter = -1;
             _lock = new object();
         }
 
-        public PoolObject Get()
+        public T Get()
         {
             lock (_lock)
             {
-                PoolObject item;
+                T item;
 
                 if (_availableObjects.Count == 0)
                 {
                     _counter++;
-                    item = new PoolObject(_counter);
+                    item = new T();
+                    item.Number = _counter;
                 }
                 else
                 {
@@ -47,12 +48,11 @@ namespace DesignPatterns.CreationalPatterns.ObjectPool
 
                 _inUseObjects.Add(item);
                 item.Time = DateTime.Now;
-
                 return item;
             }
         }
 
-        public void Relase(PoolObject item)
+        public void Relase(T item)
         {
             Clean(item);
 
@@ -63,7 +63,7 @@ namespace DesignPatterns.CreationalPatterns.ObjectPool
             }            
         }
 
-        private void Clean(PoolObject item)
+        private void Clean(T item)
         {
             item.Time = null;
         }

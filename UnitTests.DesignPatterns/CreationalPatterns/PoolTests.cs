@@ -14,7 +14,7 @@ namespace UnitTests.DesignPatterns.CreationalPatterns
         public void WhenGet_ShouldReturnPoolObject()
         {
             //act
-            PoolObject item = Pool.Instance.Get();
+            PoolObject item = Pool<PoolObject>.Instance.Get();
             //assert
             Assert.NotNull(item);
             Assert.NotNull(item.Time);
@@ -24,9 +24,9 @@ namespace UnitTests.DesignPatterns.CreationalPatterns
         public void WhenRelase_ShouldSetTimeToNull()
         {
             //arrange
-            PoolObject item = Pool.Instance.Get();
+            PoolObject item = Pool<PoolObject>.Instance.Get();
             //act
-            Pool.Instance.Relase(item);
+            Pool<PoolObject>.Instance.Relase(item);
             //assert            
             Assert.Null(item.Time);
         }
@@ -35,10 +35,10 @@ namespace UnitTests.DesignPatterns.CreationalPatterns
         public void WhenGet_WithObjectInPool_ShouldReturnObjectFromPool()
         {
             //arrange
-            PoolObject first = Pool.Instance.Get();           
-            Pool.Instance.Relase(first);
+            PoolObject first = Pool<PoolObject>.Instance.Get();           
+            Pool<PoolObject>.Instance.Relase(first);
             //act
-            PoolObject sec = Pool.Instance.Get();
+            PoolObject sec = Pool<PoolObject>.Instance.Get();
             //assert            
             Assert.Equal(first.Number, sec.Number);
         }

@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.CreationalPatterns.ObjectPool
 {
-    public class PoolObject
+    public class PoolObject:IPoolObject
     {
-        public int Number { get; private set; }
-        public DateTime? Time { get; set; }
-        public PoolObject(int number)
-        {
-            Number = number;           
-        }
+        public int Number { get; set; }
+        public DateTime? Time { get; set; }       
     }
 }
